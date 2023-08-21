@@ -1,0 +1,12 @@
+Implementation using OrderedDict:
+
+Time Complexity:
+
+get(key): O(1) - Both dictionary lookups and moving an item to the end of the OrderedDict take constant time.
+put(key, value): O(1) - Dictionary insertions, updates, and moving an item to the end of the OrderedDict all 
+take constant time.
+Space Complexity:
+
+The space complexity of this implementation is O(capacity) because it requires storing the key-value pairs in 
+the dictionary and maintaining the order of keys in the OrderedDict. The size of the dictionary and OrderedDict 
+will be limited to the specified cache capacity.
