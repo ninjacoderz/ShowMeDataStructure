@@ -17,7 +17,10 @@ def find_files(suffix, path):
     Returns:
        a list of paths
     """
-    files_in_dir = os.listdir(path)
+    if (os.path.isdir(path)):
+        files_in_dir = os.listdir(path)
+    else:
+        return "Invalid folder!"
     file_matched = []
     for file in files_in_dir:
         path_to_file = path+"/"+file
@@ -26,7 +29,7 @@ def find_files(suffix, path):
                 file_matched.append(path_to_file)
             else:
                 continue
-        else:
+        if (os.path.isdir(path_to_file)):
             file_matched.extend(find_files(suffix,path_to_file))
     return file_matched
 
@@ -37,6 +40,7 @@ print(find_files("c", "."))
 
 ## Test Case 1
 
-## Test Case 2
-
-## Test Case 3
+## Test Case 2 invalid path
+print(find_files('.h', "." + '/abc'))
+## Test Case 3 invalid extension
+print(find_files('.gyh',"." ))
