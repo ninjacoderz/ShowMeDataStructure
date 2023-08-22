@@ -226,10 +226,11 @@ def test_function(sentence):
     print('\n\n\n')
 
 # Edge test cases
-# test_function('')
-# test_function('A')
-# test_function('AA')
-# test_function('AAAAA')
+test_function('')
+test_function('a')
+test_function('A')
+test_function('AA')
+test_function('aaaaaaaaaaaaa')
 
 # General test case
 test_function("The bird is the word")
